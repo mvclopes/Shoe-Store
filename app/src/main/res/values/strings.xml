@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hint_user_login">Enter your user name</string>
+    <string name="hint_password_login">Enter your password</string>
+    <string name="btn_confirm">Confirm</string>
+    <string name="btn_create_new_user">Create new user</string>
+    <string name="image_shoe_store">Logo\'s shoe store app</string>
 </resources>
