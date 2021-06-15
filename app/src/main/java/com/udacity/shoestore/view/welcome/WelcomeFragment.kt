@@ -37,8 +37,7 @@ class WelcomeFragment : Fragment() {
         binding.lifecycleOwner = this
 
         binding.fabInstructions.setOnClickListener{
-            //TODO: Fazer navegação para tela de instruções
-            Toast.makeText(context, "We're going to instruction screen! Are you ready?!", Toast.LENGTH_SHORT).show()
+            findNavController().navigate(WelcomeFragmentDirections.actionWelcomeFragmentToInstructionsFragment())
         }
 
         return binding.root
