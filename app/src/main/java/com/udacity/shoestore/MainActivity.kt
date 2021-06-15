@@ -1,6 +1,7 @@
 package com.udacity.shoestore
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
@@ -22,20 +23,23 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         Timber.plant(Timber.DebugTree())
 
+        setSupportActionBar(findViewById(R.id.toolbar))
         navController = this.findNavController(R.id.nav_host_fragment)
-        NavigationUI.setupActionBarWithNavController(this, navController)
         appBarConfiguration = AppBarConfiguration(navController.graph)
+        NavigationUI.setupActionBarWithNavController(this, navController)
+
         navController.addOnDestinationChangedListener { nc: NavController, nd: NavDestination, _: Bundle?  ->
-            if ( nd.id != nc.graph.startDestination && !viewModel.eventUserLogged.value!!){
-                //TODO:Caso não esteja na tela inicial e usuário não logado
-                nc.popBackStack()
-                nc.navigate(nc.graph.startDestination)
+            //TODO:validar caso usuário não logado
+            if (nd.id == nc.graph.startDestination && !viewModel.eventUserLogged.value!!){
+                Toast.makeText(applicationContext, "Tela inicial e usuário não logado", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
-    override fun onNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment)
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = this.findNavController(R.id.nav_host_fragment)
         return NavigationUI.navigateUp(navController, appBarConfiguration)
     }
 }
+
+
