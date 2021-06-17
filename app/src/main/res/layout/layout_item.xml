@@ -1,47 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="4dp"
-    >
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <RelativeLayout
+    <data>
+        <variable
+            name="viewModel"
+            type="com.udacity.shoestore.view.shoeList.ShoeListViewModel"/>
+    </data>
+
+    <androidx.cardview.widget.CardView
+
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
 
-        <TextView
-            android:id="@+id/textModel"
-            tools:text="Modelo"
-            android:textSize="20sp"
-            android:padding="8dp"
-            android:layout_margin="2dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textCompany"
-            tools:text="Marca"
-            android:textSize="16sp"
-            android:padding="8dp"
-            android:layout_marginLeft="16dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/textModel"
-            android:layout_alignBaseline="@id/textModel"/>
+            <TextView
+                android:id="@+id/textModel"
+                android:text="@{String.valueOf(viewModel.shoeList.get(0))}"
+                tools:text="Modelo"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:padding="8dp"
+                android:layout_margin="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
-        <TextView
-            android:id="@+id/textDescription"
-            tools:text="Descrição"
-            android:textSize="14sp"
-            android:padding="8dp"
-            android:layout_margin="2dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/textModel"
-            android:layout_marginTop="8dp"/>
+            <TextView
+                android:id="@+id/textCompany"
+                android:text="@{String.valueOf(viewModel.shoeList.get(2))}"
+                tools:text="Marca"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:padding="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/textModel"
+                android:layout_alignBaseline="@id/textModel"/>
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/textDescription"
+                android:text="@{String.valueOf(viewModel.shoeList.get(3))}"
+                tools:text="Descrição"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:padding="8dp"
+                android:layout_margin="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textModel"
+                android:layout_marginTop="8dp"/>
 
-</androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

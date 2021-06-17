@@ -1,17 +1,23 @@
 <resources>
     <string name="app_name">ShoeStore</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="format_welcome_message">Welcome %s !</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Screen Login -->
     <string name="hint_user_login">Enter your user name</string>
     <string name="hint_password_login">Enter your password</string>
     <string name="btn_confirm">Confirm</string>
     <string name="btn_create_new_user">Create new user</string>
     <string name="image_shoe_store">Logo\'s shoe store app</string>
-    <string name="description_example">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue a massa et tempor. Quisque dignissim odio vitae ex placerat, sed imperdiet justo condimentum. Donec eu risus ipsum. Donec fermentum dui ac elit hendrerit, quis suscipit ligula ornare. Vivamus a nisl mauris. In in consectetur libero. Etiam ut elementum metus. Maecenas quis feugiat massa. Nunc sed commodo risus. Ut ut elit maximus quam bibendum condimentum. Phasellus in urna sapien. Etiam consequat viverra aliquam. Sed fermentum, nisi vitae mattis vestibulum, orci nibh congue neque, in tempor lorem leo suscipit tortor. Sed eu ex felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur ornare neque vel magna auctor consequat.</string>
+
+    <!-- Screen Welcome -->
     <string name="logo_welcome">Logo\'s welcome</string>
+    <string name="format_welcome_message">Welcome %s !</string>
+    <string name="description_example">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi congue a massa et tempor. Quisque dignissim odio vitae ex placerat, sed imperdiet justo condimentum. Donec eu risus ipsum. Donec fermentum dui ac elit hendrerit, quis suscipit ligula ornare. Vivamus a nisl mauris. In in consectetur libero. Etiam ut elementum metus. Maecenas quis feugiat massa. Nunc sed commodo risus. Ut ut elit maximus quam bibendum condimentum. Phasellus in urna sapien. Etiam consequat viverra aliquam. Sed fermentum, nisi vitae mattis vestibulum, orci nibh congue neque, in tempor lorem leo suscipit tortor. Sed eu ex felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur ornare neque vel magna auctor consequat.</string>
     <string name="fab_go_instructions">Floating Button to go the screen Instructions</string>
+
+    <!-- Screen Instructions -->
     <string name="title_instruction">Instructions</string>
     <string name="instructions_logo">Instructions logo</string>
     <string name="fab_go_shoe_list">FAB to go the shoes list</string>
+
 </resources>
