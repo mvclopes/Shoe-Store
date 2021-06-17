@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentInstructionsBinding
 
@@ -20,8 +21,7 @@ class InstructionsFragment : Fragment() {
         binding = FragmentInstructionsBinding.inflate(inflater, container, false)
 
         binding.fabGoShoeList.setOnClickListener{
-            //TODO: navegar para tela da lista de tenis
-            Toast.makeText(context, "We're gonna navigate to shoe list screen. Are you ready?!", Toast.LENGTH_SHORT).show()
+            findNavController().navigate(InstructionsFragmentDirections.actionInstructionsFragmentToShoeListFragment())
         }
         return binding.root
     }
