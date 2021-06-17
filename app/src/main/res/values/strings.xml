@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">ShoeStore</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="item_logout">Logout</string>
 
     <!-- Screen Login -->
+    <string name="title_fragment_login">Login</string>
     <string name="hint_user_login">Enter your user name</string>
     <string name="hint_password_login">Enter your password</string>
     <string name="btn_confirm">Confirm</string>
@@ -16,8 +18,12 @@
     <string name="fab_go_instructions">Floating Button to go the screen Instructions</string>
 
     <!-- Screen Instructions -->
+    <string name="title_fragment_instructions">Instructions</string>
     <string name="title_instruction">Instructions</string>
     <string name="instructions_logo">Instructions logo</string>
     <string name="fab_go_shoe_list">FAB to go the shoes list</string>
+
+    <!-- Screen Shoe List -->
+    <string name="title_fragment_shoe_list">Shoe List</string>
 
 </resources>
