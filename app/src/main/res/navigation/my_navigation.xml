@@ -39,5 +39,21 @@
         android:id="@+id/shoeListFragment"
         android:name="com.udacity.shoestore.view.shoeList.ShoeListFragment"
         android:label="@string/title_fragment_shoe_list"
-        tools:layout="@layout/fragment_shoe_list" />
+        tools:layout="@layout/fragment_shoe_list" >
+        <action
+            android:id="@+id/action_shoeListFragment_to_shoeDetailsAddFragment"
+            app:destination="@id/shoeDetailsAddFragment" />
+        <action
+            android:id="@+id/action_shoeListFragment_to_shoeDetailsEditFragment"
+            app:destination="@id/shoeDetailsEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeDetailsAddFragment"
+        android:name="com.udacity.shoestore.view.shoeDetails.ShoeDetailsAddFragment"
+        android:label="ShoeDetailsAddFragment" />
+    <fragment
+        android:id="@+id/shoeDetailsEditFragment"
+        android:name="com.udacity.shoestore.view.shoeDetails.ShoeDetailsEditFragment"
+        android:label="fragment_shoe_details_edit"
+        tools:layout="@layout/fragment_shoe_details_edit" />
 </navigation>
