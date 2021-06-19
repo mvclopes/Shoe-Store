@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 
 class LoginViewModel:ViewModel() {
 
-    //TODO: Atributos a serem exibidos na UI Controller e métodos públicos para evento de logar
     var _user = MutableLiveData<String>()
 
     var _password = MutableLiveData<String>()
@@ -34,9 +33,5 @@ class LoginViewModel:ViewModel() {
 
     fun onLogin(){
         _eventUserLogged.value = true
-    }
-
-    fun onLogoff(){
-        _eventUserLogged.value = false
     }
 }
