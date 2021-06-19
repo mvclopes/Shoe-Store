@@ -34,8 +34,4 @@ class LoginViewModel:ViewModel() {
     fun onLogin(){
         _eventUserLogged.value = true
     }
-
-    fun onLogoff(){
-        _eventUserLogged.value = false
-    }
 }

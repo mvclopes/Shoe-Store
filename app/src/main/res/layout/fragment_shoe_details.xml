@@ -53,6 +53,7 @@
                 <EditText
                     android:id="@+id/edtModel"
                     android:text="@={shoeDetails.name}"
+                    android:inputType="textShortMessage"
                     android:hint="@string/hint_model"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -71,8 +72,8 @@
                 <EditText
                     android:id="@+id/edtSize"
                     android:text="@={`` + shoeDetails.size}"
-                    android:hint="@string/hint_size"
                     android:inputType="number"
+                    android:hint="@string/hint_size"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/lblSize"
@@ -90,6 +91,7 @@
                 <EditText
                     android:id="@+id/edtCompany"
                     android:text="@={shoeDetails.company}"
+                    android:inputType="textShortMessage"
                     android:hint="@string/hint_company"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -108,6 +110,8 @@
                 <EditText
                     android:id="@+id/edtDescription"
                     android:text="@={shoeDetails.description}"
+                    android:inputType="textMultiLine"
+                    android:maxLength="120"
                     android:hint="@string/hint_description_shoe"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

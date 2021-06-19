@@ -19,7 +19,8 @@
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.udacity.shoestore.view.welcome.WelcomeFragment"
-        android:label="Welcome {userName}" >
+        android:label="Welcome {userName}"
+        tools:layout="@layout/fragment_shoe_details">
         <argument
             android:name="userName"
             app:argType="string" />
@@ -32,7 +33,8 @@
     <fragment
         android:id="@+id/instructionsFragment"
         android:name="com.udacity.shoestore.view.instruction.InstructionsFragment"
-        android:label="@string/title_fragment_instructions" >
+        android:label="@string/title_fragment_instructions"
+        tools:layout="@layout/fragment_shoe_details">
         <action
             android:id="@+id/action_instructionsFragment_to_shoeListFragment"
             app:destination="@id/shoeListFragment"
@@ -54,12 +56,13 @@
     <fragment
         android:id="@+id/shoeDetailsAddFragment"
         android:name="com.udacity.shoestore.view.shoeDetails.ShoeDetailsAddFragment"
-        android:label="ShoeDetailsAddFragment" />
+        android:label="@string/title_fragment_shoe_details"
+        tools:layout="@layout/fragment_shoe_details"/>
     <fragment
         android:id="@+id/shoeDetailsEditFragment"
         android:name="com.udacity.shoestore.view.shoeDetails.ShoeDetailsEditFragment"
-        android:label="fragment_shoe_details_edit"
-        tools:layout="@layout/fragment_shoe_details_edit" >
+        android:label="@string/title_fragment_shoe_details"
+        tools:layout="@layout/fragment_shoe_details" >
         <argument
             android:name="positionId"
             app:argType="integer" />
