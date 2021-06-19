@@ -3,11 +3,8 @@ package com.udacity.shoestore.view.login
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
-import android.widget.Toast
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentLoginBinding
@@ -34,7 +31,7 @@ class LoginFragment : Fragment() {
         viewModel.eventUserCreated.observe(viewLifecycleOwner, Observer {
             if (it){
                 Timber.i("User ${viewModel._user.value} created and logged")
-                findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment("new user ${viewModel._user.value}"))
+                findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment(viewModel._user.value?: "generic_user"))
                 viewModel.onCreateUserComplete()
             }
         })
@@ -43,7 +40,6 @@ class LoginFragment : Fragment() {
             if (it){
                 Timber.i("User ${viewModel._user.value} logged")
                 findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment(viewModel._user.value?: "generic_user"))
-
             }
         })
 
