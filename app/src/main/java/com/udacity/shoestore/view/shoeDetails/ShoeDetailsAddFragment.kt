@@ -30,7 +30,6 @@ class ShoeDetailsAddFragment : Fragment() {
         binding.btnSave.setOnClickListener {
             val newShoe = binding.shoeDetails!!
             viewModel.addNewShoe(newShoe)
-            Timber.i("ViewModel -> ${viewModel.shoeList.value}")
             findNavController().navigateUp()
         }
 

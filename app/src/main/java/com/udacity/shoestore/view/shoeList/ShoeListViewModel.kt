@@ -25,9 +25,13 @@ class ShoeListViewModel:ViewModel() {
         )
     }
 
-    //TODO: método para adicionar mais objetos a shoe list
     fun addNewShoe(shoe: Shoe){
         _shoeList.value?.add(shoe)
+    }
+
+    fun updateShoeList(positionId: Int, shoeEdit: Shoe?){
+        if (shoeEdit != null)
+            _shoeList.value?.set(positionId,shoeEdit)
     }
 
 }

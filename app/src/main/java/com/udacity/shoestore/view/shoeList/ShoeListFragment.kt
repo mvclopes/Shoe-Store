@@ -26,8 +26,6 @@ class ShoeListFragment : Fragment() {
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
 
-        Timber.i("ViewModel -> ${viewModel.shoeList.value}")
-
         binding.recyclerViewShoeList.adapter = ShoeListAdapter(viewModel.shoeList)
         binding.recyclerViewShoeList.layoutManager = LinearLayoutManager(context)
 
