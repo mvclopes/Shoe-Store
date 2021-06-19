@@ -6,17 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.udacity.shoestore.R
-import com.udacity.shoestore.databinding.FragmentInstructionsBinding
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
+import timber.log.Timber
 
 class ShoeListFragment : Fragment() {
 
     private lateinit var binding: FragmentShoeListBinding
-    private val viewModel: ShoeListViewModel by viewModels()
+    private val viewModel: ShoeListViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,8 +30,7 @@ class ShoeListFragment : Fragment() {
         binding.recyclerViewShoeList.layoutManager = LinearLayoutManager(context)
 
         binding.fabGoShoeDetails.setOnClickListener {
-            //TODO: implementar navegação para tela de SHoe Details
-            Toast.makeText(context, "We're gonna shoe details screen. Are you ready?!", Toast.LENGTH_SHORT).show()
+            findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailsAddFragment())
         }
 
         return binding.root

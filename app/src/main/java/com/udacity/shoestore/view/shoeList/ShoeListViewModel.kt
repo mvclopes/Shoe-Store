@@ -7,11 +7,12 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.udacity.shoestore.R
 import com.udacity.shoestore.models.Shoe
+import timber.log.Timber
 
 class ShoeListViewModel:ViewModel() {
 
-    private var _shoeList = MutableLiveData<List<Shoe>>()
-    val shoeList : LiveData<List<Shoe>>
+    private var _shoeList = MutableLiveData<MutableList<Shoe>>()
+    val shoeList : LiveData<MutableList<Shoe>>
         get() = _shoeList
 
     init {
@@ -24,5 +25,13 @@ class ShoeListViewModel:ViewModel() {
         )
     }
 
-    //TODO: método para adicionar mais objetos a shoe list
+    fun addNewShoe(shoe: Shoe){
+        _shoeList.value?.add(shoe)
+    }
+
+    fun updateShoeList(positionId: Int, shoeEdit: Shoe?){
+        if (shoeEdit != null)
+            _shoeList.value?.set(positionId,shoeEdit)
+    }
+
 }

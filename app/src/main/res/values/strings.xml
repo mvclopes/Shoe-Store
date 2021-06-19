@@ -26,4 +26,13 @@
     <!-- Screen Shoe List -->
     <string name="title_fragment_shoe_list">Shoe List</string>
 
+    <!-- Screen Shoe Details   -->
+    <string name="title_fragment_shoe_details">Shoe Details</string>
+    <string name="hint_model">Model (Ex.: AirMax 90)</string>
+    <string name="hint_company">Company (Ex.: Nike)</string>
+    <string name="hint_size">Size (Ex.: 40)</string>
+    <string name="hint_description_shoe">Shoe\'s description</string>
+    <string name="btn_save_shoe_details">Save</string>
+    <string name="btn_cancel_shoe_details">Cancel</string>
+    <string name="label_title_add_shoe_details">Shoe details</string>
 </resources>
